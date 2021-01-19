@@ -10,6 +10,22 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'confirmacionmensaje',
+    loadChildren: () => import('./confirmacionmensaje/confirmacionmensaje.module').then( m => m.ConfirmacionmensajePageModule)
+  },
+  {
+    path: 'lista-mensajes',
+    loadChildren: () => import('./lista-mensajes/lista-mensajes.module').then( m => m.ListaMensajesPageModule)
+  },
+  {
+    path: 'contact/:uid',
+    loadChildren: () => import('./contact2/contact2.module').then( m => m.Contact2PageModule)
   }
 ];
 

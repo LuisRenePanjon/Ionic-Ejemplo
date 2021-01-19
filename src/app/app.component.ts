@@ -11,6 +11,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
+
+  correo = 'lrpb@est.ups.ec';
+
   public appPages = [
     {
       title: 'Inbox',
@@ -18,8 +21,8 @@ export class AppComponent implements OnInit {
       icon: 'mail'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'Contactos',
+      url: '/lista-mensajes',
       icon: 'paper-plane'
     },
     {

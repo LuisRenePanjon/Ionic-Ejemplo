@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contacto RealTime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <h1>Aprendiendo Ionic</h1>
+
+  <p>Hola {{mensaje.nombre}}</p>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="mensaje.nombre"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input [(ngModel)]="mensaje.correo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Mensaje</ion-label>
+    <!-- Default textarea -->
+    <ion-textarea placeholder="Enter more information here..." [(ngModel)]="mensaje.mensaje"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <!-- Checkbox Colors -->
+    <ion-label position="floating">Trabaja</ion-label>
+    <ion-checkbox color="primary" [(ngModel)]="trabaja"></ion-checkbox>
+  </ion-item>
+
+  <ion-item *ngIf="trabaja">
+    <ion-label position="floating">Lugar de trabajo</ion-label>
+    <ion-input [(ngModel)]="oficina"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    {{mensaje.correo}}
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="dark" (click)="guardar()">Enviar</ion-button>
+  </ion-item>
+
+</ion-content>
