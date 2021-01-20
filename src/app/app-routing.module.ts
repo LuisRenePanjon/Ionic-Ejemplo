@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'contact/:uid',
     loadChildren: () => import('./contact2/contact2.module').then( m => m.Contact2PageModule)
+  },
+  {
+    path: 'equipos-lista',
+    loadChildren: () => import('./pages/equipos-lista/equipos-lista.module').then( m => m.EquiposListaPageModule)
   }
 ];
 

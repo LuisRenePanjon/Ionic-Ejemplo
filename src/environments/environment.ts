@@ -11,7 +11,13 @@ export const environment = {
     storageBucket: "empleoejemploups.appspot.com",
     messagingSenderId: "1094578806996",
     appId: "1:1094578806996:web:26c111809aff4aed3a1b41"
-  }
+  },
+
+  url: 'https://api-football-v1.p.rapidapi.com/v2',
+  apiLlave: '8fa31bf32cmshdf382181ae681acp16074fjsn16a1e4e5eff2',
+  apiHost: 'api-football-v1.p.rapidapi.com',
+  queri: true
+
 };
 
 /*
