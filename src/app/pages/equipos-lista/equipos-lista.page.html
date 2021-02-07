@@ -5,33 +5,44 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>
-      <h1>Lista de Contactos</h1>
-    </ion-list-header>
+  <ion-item>
+    <ion-label position="floating">Codigo</ion-label>
+    <ion-input [(ngModel)]="id"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="dark" (click)="getPlayer()">Enviar</ion-button>
+  </ion-item>
 
     <!-- Sliding item with icon start options on end side -->
-    <ion-item-sliding *ngFor="let equipo of equipos ">
+
+
       <ion-item>
-        <ion-avatar slot="start">
-          <img src="./avatar-finn.png">
-        </ion-avatar>
-        <ion-label >
-          <h2>{{equipo.id}}</h2>
-          <h3>{{equipo.name}}</h3>
-          <p>Hola</p>
-        </ion-label>
+          <ion-label >Imagen</ion-label>
+          <img src="{{imangen}}" >    
       </ion-item>
-      <ion-item-options>
-        <ion-item-option color="primary" >
-          <ion-icon slot="start" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-          Editar
-        </ion-item-option>
-        <ion-item-option color="secondary" >
-          <ion-icon slot="start" name="archive"></ion-icon>
-          Borrar
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+    <ion-item>
+      <ion-label >Nombre</ion-label>
+          <h2>{{nombre}}</h2>
+
+    </ion-item>
+    <ion-item>
+      <ion-label >Cumpleanios</ion-label>
+          <h3>{{cumpleanios}}</h3>
+      </ion-item>
+
+  <ion-item>
+    <ion-label >Liga</ion-label>
+    <h3>{{liga}}</h3>
+  </ion-item>
+  <ion-item>
+    <ion-label >Nacionalidad</ion-label>
+    <h3>{{nacionalidad}}</h3>
+  </ion-item>
+  <ion-item>
+    <ion-label >Valor en mercado</ion-label>
+    <h3>{{mercado}}</h3>
+  </ion-item>
+
+
 </ion-content>

@@ -6,6 +6,10 @@ import {AngularFirestore} from '@angular/fire/firestore';
 })
 export class ContactosService {
 
+  probando: string;
   constructor(public angularfs: AngularFirestore) { }
+
+
+
 
 }

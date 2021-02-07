@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>example</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>{{ title }}</h1>
+
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+  <agm-map [latitude]="lat" [longitude]="lng" (centerChange)="setNewLocation($event)">
+    <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="'https://cdn4.iconfinder.com/data/icons/essential-app-2/16/botton-on-launch-point-48.png'">
+      <agm-info-window>UPS</agm-info-window>
+
+    </agm-marker>
+
+
+    <agm-marker [latitude]="newLocation.latitude" [longitude]="newLocation.longitude" [iconUrl]="'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/48/Map-Marker-Ball-Azure.png'">
+      <agm-info-window>{{newLocation.address}}</agm-info-window>
+
+    </agm-marker>
+
+  </agm-map>
+
+  {{newLocation | json}}
+
+
+</ion-content>
+
+
+
+
+

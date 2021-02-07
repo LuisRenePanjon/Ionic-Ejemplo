@@ -12,7 +12,7 @@ export class ConfirmacionmensajePage implements OnInit {
   mensaje: Mensaje;
   trabaja: boolean;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+    constructor(private route: ActivatedRoute, private router: Router) {
 
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state){
@@ -20,7 +20,7 @@ export class ConfirmacionmensajePage implements OnInit {
         this.trabaja = this.router.getCurrentNavigation().extras.state.trabaja;
         console.log("PArametros recibidos",this.mensaje,this.trabaja);
       }
-    })
+    });
   }
 
   ngOnInit() {

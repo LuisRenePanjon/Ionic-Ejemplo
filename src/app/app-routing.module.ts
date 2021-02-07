@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'equipos-lista',
     loadChildren: () => import('./pages/equipos-lista/equipos-lista.module').then( m => m.EquiposListaPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'example',
+    loadChildren: () => import('./example/example.module').then( m => m.ExamplePageModule)
   }
 ];
 
